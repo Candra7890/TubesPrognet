@@ -28,7 +28,7 @@ class Barang extends Model
 
     public function subcategory()
     {
-        return $this->belongsTo(Subcategory::class, 'id_subkategori', 'id');
+        return $this->belongsTo(SubCategory::class, 'id_subkategori', 'id');
     }
 
     public function keranjang()
