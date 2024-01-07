@@ -45,7 +45,7 @@
 
 
       <div class="row items-grid">
-            @foreach ($barangs as $barang)
+            @foreach ($products as $barang)
             <div class="col-md-3 col-xs-6">
                 <div class="product-item hover-trigger">
                     <div class="product-img">

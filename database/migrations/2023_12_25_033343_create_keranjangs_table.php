@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('id_member');
             $table->integer('id_barang');
             $table->integer('jumlah');
-            $table->string('ukuran');
+            $table->string('size');
             $table->integer('total');
             $table->integer('is_checkout');
             $table->timestamps();

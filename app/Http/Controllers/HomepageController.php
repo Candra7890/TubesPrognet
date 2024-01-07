@@ -22,16 +22,15 @@ class HomepageController extends Controller
         $sliders = Slider::all();
         $categories = Category::all();
         $testimonis = Testimoni::all();
-        $barangs = Barang::skip(0)->take(8)->get();
+        $products = Barang::skip(0)->take(8)->get();
 
-        return view('homepage.index', compact('sliders', 'categories', 'testimonis', 'barangs'));
+        return view('homepage.index', compact('sliders', 'categories', 'testimonis', 'products'));
     }
 
     public function barangs($id_subcategory)
     {
-        $barangs = Barang::where('id_subkategori', $id_subcategory)->get();
-        dd($barangs);
-        return view('homepage.barangs', compact('barangs'));
+        $products = Barang::where('id_subkategori', $id_subcategory)->get();
+        return view('homepage.barangs', compact('products'));
     }
 
     public function barang($id_barang)

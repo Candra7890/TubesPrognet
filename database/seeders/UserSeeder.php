@@ -13,8 +13,8 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name' => 'Administrator',
-            'email' => 'admin@admin.com',
+            'name' => 'Administrator2',
+            'email' => 'admin2@admin.com',
             'password' => bcrypt('admin'),
             'email_verified_at' => now()
         ]);
