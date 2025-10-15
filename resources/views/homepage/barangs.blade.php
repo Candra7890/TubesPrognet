@@ -1,3 +1,4 @@
+{{$products}}
 @extends('layout.homepage')
 
 @section('title', 'List Products')
@@ -32,12 +33,13 @@
             </form>
         </div>
 
+        {{$products}}
         <div class="row">
             <div class="col-md-12 catalogue-col right mb-50">
                 <div class="shop-catalogue grid-view">
 
                     <div class="row items-grid">
-                        @foreach ($barangs as $barang)
+                        @foreach ($products as $barang)
                         
                         <div class="col-md-4 col-xs-6 product product-grid">
                             <div class="product-item clearfix">
@@ -61,7 +63,7 @@
                                     </h3>
                                     <span class="category">
                                         <a
-                                            href="/barangs/{{$barang->id_subkategori}}">{{$barang->subcategory->nama_subkategori}}</a>
+                                            href="/products/{{$barang->id_subkategori}}">{{$barang->subcategory->nama_subkategori}}</a>
                                     </span>
                                 </div>
                                 <span class="price">

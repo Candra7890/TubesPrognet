@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nomortransaksi');
             $table->double('totalharga');
-            $table->unsignedBigInteger('user_id');
+            $table->integer('id_member');
             $table->timestamps();
         });
     }

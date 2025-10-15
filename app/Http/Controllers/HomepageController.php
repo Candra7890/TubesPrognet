@@ -29,9 +29,8 @@ class HomepageController extends Controller
 
     public function barangs($id_subcategory)
     {
-        $barangs = Barang::where('id_subkategori', $id_subcategory)->get();
-        dd($barangs);
-        return view('homepage.barangs', compact('barangs'));
+        $products = Barang::where('id_subkategori', $id_subcategory)->get();
+        return view('homepage.barangs', compact('products'));
     }
 
     public function barang($id_barang)
